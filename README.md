@@ -1,4 +1,12 @@
-projet-ptut-4ir-web2-0
+Projet 4ir - web 2.0
 ======================
 
-4th year mentored project at the National Institute of Applied Sciences (INSA) of Toulouse, France. Contributors:  Maguette D., Fadi H., Mohamet D., Guilhem D. , Mehdi B. A.
+Student project at the National Institute of Applied Sciences (INSA), Toulouse, France.
+
+Contributors:
+
+  - Maguette D.
+  - Fadi H.
+  - Mohamet D.
+  - Guilhem D.
+  - Mehdi B. A.
