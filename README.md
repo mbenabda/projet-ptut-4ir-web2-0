@@ -6,7 +6,7 @@ Student project at the National Institute of Applied Sciences (INSA), Toulouse, 
 Contributors:
 
   - Maguette D.
+  - Mohamet Dia ( @dia_momo )
   - Fadi H.
-  - Mohamet D.
   - Guilhem D.
   - Mehdi B. A.
