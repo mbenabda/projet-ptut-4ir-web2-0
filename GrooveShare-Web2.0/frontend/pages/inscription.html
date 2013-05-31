@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Share Your Groove</title>
+
+
+        <!--Meta Donnée (essentiellement pour le réferencement)-->   
+        <meta name="publisher" content="INSA Toulouse Web2.0 Group">
+        <meta name="keywords" lang="fr" content="Partage, Musique, Compiles ">
+        <meta name="reply-to" content="root@shareurgroove.com">
+        <meta name="category" content="partage">
+        <meta name="robots" content="index, follow">
+        <meta name="distribution" content="global"> 
+        <meta name="Description" content="Site de partage de musique">
+        <meta name="revisit-after" content="3 day"> <!--specifie la fréquence de réindexation du robot-->
+        <meta name="author" lang="fr" content="html Guru"> 
+        <meta name="copyright" content="insaweb2012"> 
+        <meta name="abstract" content="Site de partage de musique"><!--maximum 200 caractéres-->
+        <meta name="identifier-url" content="http://www.shareurgroove.com/">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!--Icon du site--> 
+        <link rel="icon" type="image/png" href="../img/icons/favicon.png"/>
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icons/favicon.ico" />
+        <!--Police-->
+        <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <!--Include des Feuilles de styles-->
+        <link href="../css/skins/ui-darkness/jquery-ui-1.8.20.custom.css" type="text/css" rel="stylesheet" />
+        <link href='../css/design.css' type='text/css' rel='stylesheet' />
+        <link href='../css/formulaire.css' type='text/css' rel='stylesheet' />
+       
+
+        <!-- Include des Scripts -->
+        <script type="text/javascript" src="../js/JQuery/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../js/JQuery/jquery-ui-1.8.20.custom.min.js"></script>
+        <!-- Scripts -->
+
+        <!-- Datepicker -->
+        <script type="text/javascript">
+            $(function(){
+                $('#date_naissance').datepicker({
+                    dateFormat:'dd-mm-yy',
+                    changeMonth: true,
+                    changeYear: true,
+                    yearRange : "1900:2012"
+                })               
+            });
+	</script>
+
+        <!-- effet toggle lors du click sur checkbox artiste? -->
+        <script type="text/javascript">
+            $(function()
+                {
+                    $("#isArtiste").attr('checked', false);
+                    $("#option_artist").css('display', 'none');
+                    
+                    /*$("#option_artist").css('display', 'none');*/
+
+                    $("#isArtiste").click(function () {
+                        $("#option_artist").slideToggle("fast");
+                        })
+                });
+
+	</script>
+    </head>
+    <body>
+
+        <div id="global">
+            <div id="header"></div>
+            <div id="bandeau"></div>
+            <div id="menu"> 
+                <ul class="menu">
+                    <li class="btn_compils"><a href="#">Compils</a></li>
+                    <li class="btn_samples"><a href="#">Samples</a></li>
+                    <li class="btn_videos"><a href="#">Vidéos</a></li>
+                    <li class="btn_artistes"><a href="#">Artistes</a></li>
+                </ul>
+            </div>
+            <div id="contenu">
+                <div id="bloc_inscription" class="bloc">
+                    <span class="titre_bloc">FORMULAIRE D'INSCRIPTION</span>
+                    <form class="form" action = 'inscription.php' method = 'post'>
+                        <section class="contenu_bloc">    
+                            <section class="gauche">
+                                <table>
+                                    <tr>
+                                        <td class = 'label'><label for = "login">Login*:</label></td>
+                                        <td><input type = "text" name = "login" id = "login" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "pass">Mot de passe*:</label></td>
+                                        <td><input type = "password" name = "pass" id = "pass" /> </td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "conf_pass">Confirmation*:</label></td>
+                                        <td><input type = "password" name = "conf_pass" id = "conf_pass" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "email">Email*:</label></td>
+                                        <td><input type = "text" name = "email" id = "email" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "conf_email">Confirmation*:</label></td>
+                                        <td><input type = "text" name = "conf_email" id = "conf_email" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "avatar">Avatar:</label></td>
+                                        <td><input type = "file" name = "avatar" id = "avatar"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "isArtiste">Artiste?:</label></td>
+                                        <td><input type = "checkbox" name = 'isArtiste' id = 'isArtiste'></td>
+                                    </tr>
+                                </table>
+                                
+                            </section>
+                            <section class="gauche">
+                                <table>
+                                    <tr>
+                                        <td class = 'label'><label for = "nom">Nom:</label></td>
+                                        <td><input type = "text" name = "nom" id = "nom" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "prenom">Prenom:</label></td>
+                                        <td><input type = "text" name = "prenom" id = "prenom" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "date_naissance">Date de naissance*:</label></td>
+                                        <td><input type = "text" name = "date_naissance" id = "date_naissance" value ='dd-mm-yyyy'/></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan = '2' id = "address_field">
+                                            <label for = "adresse">Adresse:</label><br/>
+                                            <textarea name = "adresse" id = 'adresse' rows="2"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "ville">Ville:</label></td>
+                                        <td><input type = "text" name = "ville" id = "ville" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "CP">Code postal:</label></td>
+                                        <td><input type = "text" name = "CP" id = "CP" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td class = 'label'><label for = "id_pays">Pays*:</label></td>
+                                        <td>
+                                            <select name = "id_pays" id = "id_pays">
+                                                <option selected = "selected">Selectionner un pays</option>
+                                                <option>France</option>
+                                                <option>Arabie</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </section>
+                             
+                            <fieldset id = "option_artist">
+                                <legend> Artiste </legend>
+                                <section>
+                                    Categorie*:<br/><br/>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <input type = "checkbox" name = 'id_categories[]' id = 'categorie1' value = '1' />
+                                                Categorie1
+                                            </td>
+
+                                            <td>
+                                                <input type = "checkbox" name = 'id_categories[]' id = 'categorie2' value = '2' />
+                                                Categorie2
+                                            </td>
+
+                                            <td>
+                                                <input type = "checkbox" name = 'id_categories[]' id = 'categorie3' value = '3' />
+                                                Categorie3
+                                            </td>
+
+                                            <td>
+                                                <input type = "checkbox" name = 'id_categories[]' id = 'categorie4' value = '4' />
+                                                Categorie4
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type = "checkbox" name = 'id_categories[]' id = 'categorie5' value = '5' />
+                                                Categorie5
+                                            </td>
+
+                                            <td>
+                                                <input type = "checkbox" name = 'id_categories[]' id = 'categorie6' value = '6' />
+                                                Categorie6
+                                            </td>
+
+                                            <td>
+                                                <input type = "checkbox" name = 'id_categories[]' id = 'categorie7' value = '7' />
+                                                Categorie7
+                                            </td>
+
+                                            <td>
+                                                <input type = "checkbox" name = 'id_categories[]' id = 'categorie8' value = '8' />
+                                                Categorie8
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </section>
+                                
+                                <section style = 'clear:both;'><label for = "url_site" >Site internet: </label><input type = "text" name = "url_site" id = "url_site" /></section>
+
+                            </fieldset>
+                            <section> <button type = "submit">VALIDER</button> </section>
+                        </section>                      
+                    </form>
+                </div>
+            </div>
+             <div id="footer" style="text-align: center; color: #ffffff">
+                © WEB 2.0 TEAM INSA 2012.
+                <a style="text-decoration: none; color: #42596d" href='mailto&#58;&#102;%6&#53;di%74&#110;&#64;v&#111;ia&#108;&#46;&#102;r'>Contact Admin</a>
+            </div>
+        </div>
+    </body>
+</html>
+

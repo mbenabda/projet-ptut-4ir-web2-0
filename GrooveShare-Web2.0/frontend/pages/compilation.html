@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Share Your Groove: Fiche compiles</title>
+
+
+        <!--Meta Donnée (essentiellement pour le réferencement)-->   
+        <meta name="publisher" content="INSA Toulouse Web2.0 Group">
+        <meta name="keywords" lang="fr" content="Partage, Musique, Compiles "><!--TODO: Travaillez les mots clée-->
+        <meta name="reply-to" content="root@shareurgroove.com"><!--TODO : rajouter de l'obfuscation pour tous qui est mail-->
+        <meta name="category" content="partage">
+        <meta name="robots" content="index, follow">
+        <meta name="distribution" content="global"> 
+        <meta name="Description" content="Site de partage de musique">
+        <meta name="revisit-after" content="3 day"> <!--specifie la fréquence de réindexation du robot-->
+        <meta name="author" lang="fr" content="html Guru"> 
+        <meta name="copyright" content="insaweb2012"> 
+        <meta name="abstract" content="Site de partage de musique"><!--maximum 200 caractéres-->
+        <meta name="identifier-url" content="http://www.shareurgroove.com/"> <!--TODO: rajouter les certificats au niveau du serveur web -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!--Icon du site--> 
+        <link rel="icon" type="image/png" href="../img/icons/favicon.png"/>
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icons/favicon.ico" />
+        <!--Include des Feuilles de styles-->
+        <link href='../css/design.css' type='text/css' rel='stylesheet'/>
+        <link type="text/css" href="../css/skins/ui-darkness/custom-theme/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+        <link  href="../css/skins/comment.css" type="text/css" rel="stylesheet"/>
+        <link href="../css/compilation.css" type="text/css" rel="stylesheet"/>
+        <!--Include des Scripts-->
+        <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){  
+                //To switch directions up/down and left/right just place a "-" in front of the top/left attribute  
+                //Vertical Sliding  
+                $('.boxgrid.slidedown').hover(function(){  
+                    $(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});  
+                }, function() {  
+                    $(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});  
+                });  
+                //Horizontal Sliding  
+                $('.boxgrid.slideright').hover(function(){  
+                    $(".cover", this).stop().animate({left:'325px'},{queue:false,duration:300});  
+                }, function() {  
+                    $(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});  
+                });  
+                //Diagnal Sliding  
+                $('.boxgrid.thecombo').hover(function(){  
+                    $(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});  
+                }, function() {  
+                    $(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});  
+                });  
+                //Partial Sliding (Only show some of background)  
+                $('.boxgrid.peek').hover(function(){  
+                    $(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});  
+                }, function() {  
+                    $(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});  
+                });  
+                //Full Caption Sliding (Hidden to Visible)  
+                $('.boxgrid.captionfull').hover(function(){  
+                    $(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});  
+                }, function() {  
+                    $(".cover", this).stop().animate({top:'260px'},{queue:false,duration:160});  
+                });  
+                //Caption Sliding (Partially Hidden to Visible)  
+                $('.boxgrid.caption').hover(function(){  
+                    $(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});  
+                }, function() {  
+                    $(".cover", this).stop().animate({top:'220px'},{queue:false,duration:160});  
+                });  
+            });  
+        </script>
+        <!--Tracklist accoridion-->
+        <script type="text/javascript" src="../js/JQuery/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="../js/JQuery/jquery-ui-1.8.20.custom.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                // Accordion
+                $("#accordion").accordion({ header: "h3" });
+            });
+        </script>
+        <script type="text/javascript"> 
+            $(document).ready(function(){
+
+                //Larger thumbnail preview 
+
+                $("ul.thumb li").hover(function() {
+                    $(this).css({'z-index' : '10'});
+                    $(this).find('img').addClass("hover").stop()
+                    .animate({
+                        marginTop: '-110px', 
+                        marginLeft: '-110px', 
+                        top: '50%', 
+                        left: '50%', 
+                        width: '174px', 
+                        height: '174px',
+                        padding: '20px' 
+                    }, 200);
+	
+                } , function() {
+                    $(this).css({'z-index' : '0'});
+                    $(this).find('img').removeClass("hover").stop()
+                    .animate({
+                        marginTop: '0px', 
+                        marginLeft: '0',
+                        top: '0px', 
+                        left: '0', 
+                        width: '100px', 
+                        height: '100px', 
+                        padding: '5px'
+                    }, 400);
+                });
+ 
+            });
+        </script>
+        <!-- effet toggle pour les commentaire -->
+        <script type="text/javascript">
+            $(function()
+                {
+                    $("#addCommentForm").css('display', 'none');
+                    $("#forToggle").click(function () {
+                        $("#addCommentForm").slideToggle("fast");
+                        })
+                });
+
+	</script>
+        <!--Scripts-->
+    </head>
+    <body>
+
+        <div id="global">
+            <div id="header"></div>
+            <div id="bandeau"></div>
+            <div id="menu"> 
+                <ul class="menu">
+                    <li class="btn_compils"><a href="#">Compils</a></li>
+                    <li class="btn_samples"><a href="#">Samples</a></li>
+                    <li class="btn_videos"><a href="#">Vidéos</a></li>
+                    <li class="btn_artistes"><a href="#">Artistes</a></li>
+                </ul>
+            </div>
+            <div id="contenu">
+
+
+                <div id="bloc_compilation" class="bloc">
+                    <span class="titre_bloc">Compilation</span>
+                    <div class="contenu_bloc">
+                        <div class="compilcover">
+                            <div class="boxgrid captionfull">  
+                                <img src="http://www.partipirate.org/compilpirate/images/front.jpg"/>  
+                                <div class="cover boxcaption">  
+                                    <h3>Pirate Compilation</h3>
+                                </div>  
+                            </div> 
+                        </div>
+                        <div class="compilbackcover">
+                            <div class="boxgrid">  
+                                <img src="http://www.partipirate.org/compilpirate/images/drunk.jpg"/>  
+                            </div> 
+                        </div>
+                        <div class="compildesc">
+                            <h3>Pirate Compilation</h3>
+                            De quoi s'agit-il ? De chansons toutes publiées sous diverses licences alternatives, 
+                            que nous avons réunies pour vous faire découvrir quelques-uns de ces groupes, de ces 
+                            communautés, pour qui la musique n'est pas un produit de consommation mais un patrimoine
+                            à partager librement comme ces licences alternatives le permettent. Nous continuerons à 
+                            lutter de toutes nos forces pour que la musique ne soit pas le dernier joujou de quelques 
+                            décideurs et pour que les artistes ne soient pas jetables-après-consommation.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bloc_tracklist" class="bloc">
+                    <span class="titre_bloc">TrackList</span>
+                    <div class="contenu_bloc">
+                        <div id="accordion">
+                            <div>
+                                <h3><a href="#">Track 01</a></h3>
+                                <div>Lorem ipsum dolor sit amet.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 02</a></h3>
+                                <div>Phasellus mattis tincidunt nibh.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 03</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 04</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 05</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 06</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 07</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 08</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 09</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 10</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 11</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                            <div>
+                                <h3><a href="#">Track 12</a></h3>
+                                <div>Nam dui erat, auctor a, dignissim quis.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidegroup">
+                    <div id="bloc_download" class="bloc">
+                        <span class="titre_bloc">Download</span>
+                        <div class="contenu_bloc">
+                            <a href=""><img src="../img/Download.png"/></a>
+                            <div class="downdesc">
+                                <h4>Download size:</h4> 104.5 Mo
+                                <h4>Date de publication:</h4> 12-12-2012
+                                <h4>Credits:</h4> 112
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="bloc_artistthumb" class="bloc">
+                        <span class="titre_bloc">Artistes</span>
+                        <div class="contenu_bloc">
+                            <ul class="thumb">
+                                <li><a href="#"><img src="http://www.saintmaur-monaco.com/PagesClasses/10A_fichiers/SAUBER/thumb1.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="http://www.saintmaur-monaco.com/PagesClasses/10A_fichiers/SAUBER/thumb2.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="http://www.saintmaur-monaco.com/PagesClasses/10A_fichiers/SAUBER/thumb3.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="http://www.saintmaur-monaco.com/PagesClasses/10A_fichiers/SAUBER/thumb4.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="http://www.saintmaur-monaco.com/PagesClasses/10A_fichiers/SAUBER/thumb5.jpg" alt="" /></a></li>
+                                <li><a href="#"><img src="http://www.saintmaur-monaco.com/PagesClasses/10A_fichiers/SAUBER/thumb6.jpg" alt="" /></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clr"></div>
+
+                <div id="bloc_comment" class="bloc">
+                    <span class="titre_bloc">Comment</span>
+                    <div class="contenu_bloc">
+                        <div class="comment">
+                            <div class="avatar">
+                                <a href="">
+                                    <img src="../img/default_avatar.gif">
+                                </a>
+                            </div>
+
+                            <div class="name"><a href="">Person's Name</a></div>
+                            <div title="Added at 06:40 on 30 Jun 2010" class="date">30 Jun 2010</div>
+                            <p>Comment Body</p>
+                        </div>
+                        <div id="addCommentContainer">
+                            <div id="forToggle">Add a Comment</div>
+                            <form id="addCommentForm" method="post" action="">
+                                <div>
+                                    <label for="name">Your Name</label>
+                                    <input type="text" name="name" id="name" />
+
+                                    <label for="email">Your Email</label>
+                                    <input type="text" name="email" id="email" />
+
+                                    <label for="url">Website (not required)</label>
+                                    <input type="text" name="url" id="url" />
+
+                                    <label for="body">Comment Body</label>
+                                    <textarea name="body" id="body" cols="20" rows="5"></textarea>
+
+                                    <input type="submit" id="submit" value="Submit" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clr"></div>
+            </div>
+            <div id="footer" style="text-align: center; color: #ffffff">
+                © WEB 2.0 TEAM INSA 2012.
+                <a style="text-decoration: none; color: #42596d" href='mailto&#58;&#102;%6&#53;di%74&#110;&#64;v&#111;ia&#108;&#46;&#102;r'>Contact Admin</a>
+            </div>
+        </div>
+
+
+    </body>
+    <!--TODO : Rajouter le scirpt de google analytics-->
+</html>
+

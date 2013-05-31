@@ -1,0 +1,160 @@
+
+
+
+/*CSS Bloc fil d'actualitées */
+.bigbloc_1{
+    position:relative;
+    margin-left:30px; 
+    height:500px;
+    padding-top:30px;
+}
+.bigbloc_2{
+    margin-left:30px;
+    height:200px;
+}
+
+/*-----------------------------BLOC ARTICLES----------------------*/
+#bloc_articles{
+    position:relative;
+    float: left;
+    width:520px;
+
+}
+#bloc_articles .contenu_bloc{
+    line-height: 95%;
+}
+
+
+.biographie{
+    margin-left:10px;
+    font-size: 14px;
+}
+
+/*-----------------------------BLOC PRESENTATION----------------------*/
+#bloc_presentation{
+    position:relative;
+    float: left;
+    margin-left: 10px;
+    width:400px;
+
+}
+#bloc_presentation .contenu_bloc{
+    line-height: 95%;
+}
+.music{
+  
+}
+
+
+.ratedartistimg{
+    width: 80px;
+    float: left;
+}
+.ratedartist{
+    
+    float:left;
+}
+.statut{
+    position:relative;
+    float:left;
+    margin-left:20px;
+    margin-bottom:10px;
+    margin-top:5px;
+}
+ .vote {
+        font-weight: bold;
+        letter-spacing: -1px;
+        background: #0099cc;
+        margin-bottom: 15px;
+        padding: 5px;
+        font-size: 12px;
+        color: #ffffff;
+        border-left: 20px solid #333;
+        width: 200px;
+        -webkit-border-radius: 0.5em;
+        -moz-border-radius: 0 0.5em 0.5em 0;
+        border-radius: 0 1.5em 1.5em 0;
+        float: right;
+    }
+    
+    .vote a {
+        border-radius: 0.3em;
+        text-decoration: none;
+        color: #0099cc;
+        padding: 5px 5px;
+        background: #333;
+        margin: 0 20px;
+    }
+    
+   .vote a:hover {
+        color: #fff;
+    }
+    
+    
+
+
+/*-----------------------------BLOC PHOTOS----------------------*/
+
+#bloc_photos{
+    position:relative;
+    float: left;
+    width:520px;
+}
+#bloc_videos{
+    position:relative;
+    float: left;
+    margin-left: 10px;
+    width:400px;
+}
+/*-----------------------------BLOC COMENTAIRES----------------------*/
+
+#bloc_comentaires{
+    position:relative;
+    top:30px;
+    margin-left:30px;
+    width:945px;
+    padding-bottom: 40px;
+}
+#bloc_comentaires ul {
+    padding-left:0px;
+    list-style:none;
+
+}
+#bloc_comentaires li {
+    height: 60px;
+    padding-left:0px;
+}
+#bloc_comentaires img {
+    padding-right:20px;
+    float:left;
+    width:50px; 
+    height:50px;
+}
+.button {
+color:white;
+height:30px;
+width:100px;
+-moz-box-shadow: 0px 0px 10px #343434;
+-webkit-box-shadow: 0px 0px 10px #343434;
+-o-box-shadow: 0px 0px 10px #343434;
+box-shadow: 0px 0px 10px #343434;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+border: 1px solid #656565;
+background:#34cdf9;
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="34cdf9", endColorstr="34696d"); /* Pour IE seulement et mode gradient à linear */
+background-image: -webkit-gradient(linear, left top, left bottom, from(#34cdf9), to(#34696d));
+background-image: -moz-linear-gradient(top center, #34cdf9, #34696d);
+background-image: -o-linear-gradient(top, #34cdf9, #34696d); /*uniquement en mode linear*/
+}
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   cursor: pointer;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+}

@@ -1,0 +1,53 @@
+
+
+/* easy elements */
+
+	#easy_tooltip{
+		border:1px solid #e1e1e1;
+		padding:2px 10px;
+		background:#f5f5f5;
+		}
+	#easy_tooltip span{} /* extra element */
+	
+	#easy_popup{ /* popup overlay */
+		background:#000;
+		}
+	#easy_popup_preloader{ /* popup preloader */
+		padding:10px;
+		background:#fff;
+		color:#333;
+		}
+	#easy_popup_content{ /* popup window */
+		padding:10px;
+		background:#fff;
+		color:#333;
+		}
+	#easy_popup_content .caption{padding-top:10px;}	
+	#easy_popup_close{ /* popup close button */
+		position:absolute;
+		float:left;
+		left:0;
+		top:-24px;
+		color:#fff;
+		cursor:pointer;
+		}	
+	#easy_popup_gallery{ /* popup gallery navigation */
+		position:absolute;
+		float:left;
+		left:0;
+		bottom:-24px;
+		color:#fff;
+		cursor:pointer;
+		}	
+	#easy_popup_prev{margin-right:5px;}
+	#easy_popup_next{}
+	#easy_popup_counter{ /* popup gallery counter */
+		position:absolute;
+		float:left;
+		right:0;
+		bottom:-24px;
+		color:#fff;
+		cursor:pointer;
+		}
+	
+/* // easy elements */

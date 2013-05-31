@@ -1,0 +1,237 @@
+/*Css du Slider CSS pur du bloc de last compil*/
+#bloc_lastcompil{
+    position:relative;
+    top:20px;
+    margin-left:30px;
+    width:950px;
+}
+
+.wrap .bx-wrapper {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.bx-prev {
+    background: url("../img/sprites/icon_arrow_left.png") no-repeat scroll 0 -31px transparent;
+    height: 31px;
+    left: -35px;
+    position: absolute;
+    text-indent: -999999px;
+    top: 78px;
+    width: 31px;
+}
+
+.bx-next {
+    background: url("../img/sprites/icon_arrow_right.png") no-repeat scroll 0 -31px transparent;
+    height: 31px;
+    position: absolute;
+    right: -35px;
+    text-indent: -999999px;
+    top: 78px;
+    width: 31px;
+}
+
+.wrap .bx-next:hover, .wrap .bx-prev:hover {
+    background-position: 0 0;
+}
+
+.wrap .left {
+    float: left;
+    width: 205px;
+    margin-top: 10px;
+}
+.wrap .left img{
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+
+}
+.wrap .right {
+    float: left;
+    width: 530px;
+    border: 2px solid #DDDDDD;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 5px #DDDDDD;
+    padding-left: 10px;
+    height: 180px;
+}
+
+.wrap ul {
+    height: 195px;
+    overflow: hidden;
+    width: 800px;
+}
+
+.wrap .right .album {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.wrap .right .band {
+    color: #838383;
+    font-size: xx-small;
+}
+
+.wrap .right .compillist {
+    padding-top: 10px;
+    color: #838300;
+    font-size: 12px;
+    text-align: justify;
+    margin-right: 10px;
+}
+/*bloc regroupant actualite et classement*/
+.bigbloc{
+    margin-top:50px;
+    margin-left:30px; 
+    padding-bottom: 20px;
+}
+
+/*CSS Bloc fil d'actualitées */
+#bloc_actu{
+    position:relative;
+    float: left;
+    width:520px;
+}
+
+#bloc_actu .ticker{
+    border: 1px solid #DDDDDD;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+
+    box-shadow: 0 0 5px #DDDDDD;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    list-style: none outside none;
+
+    width: 500px;
+}
+
+
+
+#ticker {
+    height: 40px;
+    overflow: hidden;
+    color: #333333;
+
+    font-size: 10px;
+    line-height: 16px
+}
+
+#ticker{
+    height: 203px;
+}
+#ticker li {
+    height: 40px;
+    overflow: hidden;
+}
+.ticker li {
+    border-bottom: 1px dotted #DDDDDD;
+    height: 30px;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+#ticker img {
+    float: left;
+    height: 40px;
+    margin-right: 10px;
+    width: 40px;
+}
+
+
+/*CSS Bloc classement*/
+#bloc_classement{
+    position:relative;
+    float: left;
+    margin-left: 10px;
+    width:400px;
+}
+#bloc_classement ul{
+    margin: 0;
+    padding:0;
+    list-style: none outside none;  
+}
+
+#bloc_classement li{
+    height: 80px;
+    border: 1px solid #DDDDDD;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+
+    box-shadow: 0 0 5px #DDDDDD;
+}
+
+#bloc_classement img{
+    vertical-align: middle;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+
+}
+/*ce n'est pas une erreur ca c'appell bien comme ca la classe*/
+.ratedartistimg{
+    width: 80px;
+    float: left;
+}
+.ratedartist{
+
+    float:left;
+}
+/*CSS Bloc nouveau artistes*/
+#bloc_newartist{
+    position:relative;
+    top:30px;
+    margin-left:30px;
+    padding-bottom: 40px;
+    width:950px;
+}
+
+
+
+/*css le vote codé par moi même (fadi)*/
+
+
+.vote {
+    font-weight: bold;
+    letter-spacing: -1px;
+    background: #0099cc;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 12px;
+    color: #ffffff;
+    border-left: 20px solid #333;
+    width: 200px;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0 0.5em 0.5em 0;
+    border-radius: 0 1.5em 1.5em 0;
+    float: right;
+}
+
+.vote a {
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    border-radius: 0.3em;
+
+    text-decoration: none;
+    color: #0099cc;
+    padding: 5px 5px;
+    background: #333;
+    margin: 0 20px;
+}
+
+.vote a:hover {
+    color: #fff;
+}
+
+
+

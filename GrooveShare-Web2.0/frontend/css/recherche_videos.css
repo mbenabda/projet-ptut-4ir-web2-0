@@ -1,0 +1,293 @@
+/*Css du Slider CSS pur du bloc de  compil*/
+#bloc_compil{
+    position:relative;
+
+    margin-left:30px;
+    width:950px;
+}
+
+.wrap .bx-wrapper {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.bx-prev {
+    background: url("../img/sprites/icon_arrow_left.png") no-repeat scroll 0 -31px transparent;
+    height: 31px;
+    left: -65px;
+    position: absolute;
+    text-indent: -999999px;
+    top: 78px;
+    width: 31px;
+}
+
+.bx-next {
+    background: url("../img/sprites/icon_arrow_right.png") no-repeat scroll 0 -31px transparent;
+    height: 31px;
+    position: absolute;
+    right: -65px;
+    text-indent: -999999px;
+    top: 78px;
+    width: 31px;
+}
+
+.wrap .bx-next:hover, .wrap .bx-prev:hover {
+    background-position: 0 0;
+}
+
+.wrap .left {
+    float: left;
+    width: 205px;
+    margin-top: 10px;
+}
+.wrap .left img{
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+
+}
+.wrap .right {
+    float: left;
+    width: 530px;
+    border: 2px solid #DDDDDD;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+
+    box-shadow: 0 0 5px #DDDDDD;
+    padding-left: 10px;
+    height: 180px;
+}
+
+.wrap ul {
+    height: 195px;
+    overflow: hidden;
+    width: 800px;
+}
+
+.wrap .right .album {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.wrap .right .band {
+    color: #838383;
+    font-size: 16px;
+}
+
+.wrap .right .compillist {
+    padding-top: 20px;
+    color: #838300;
+    font-size: 14px;
+}
+
+
+/*Css du bloc filtre*/
+
+#bloc_filtre{
+    position:relative;
+    top:20px;
+    margin-left:30px;
+    padding-bottom: 20px;
+    width:950px;
+}
+
+.toolbelt{
+    margin-left: 40px;
+    text-align: center;
+    height: 140px;
+}
+.search-option-label{
+    margin-bottom: 6px;
+}
+.search-option{
+    text-align: left;
+    font-size: 12px;
+    color: #9F9F9F;
+}
+.search-option:hover{
+    -webkit-border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+
+    background-color: #BBBBBB;
+    width: 180px;
+    color: #27b;
+}
+.search-option-box{
+    height: 120px;
+    width: 200px;
+    position: relative;
+    float: left;
+    border-left: 2px solid #DDDDDD;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+
+    padding-left: 6px;
+}
+
+/*Css du bloc Result*/
+
+#bloc_result{
+    position:relative;
+    top:30px;
+    margin-left:30px;
+    padding-bottom: 40px;
+    width:950px;
+}
+.rescontainer{
+    padding: 0px;
+    margin: auto 0px;
+    text-align: center;
+}
+
+.colcontainer{
+    height: 280px;
+}
+.galeryelt{
+    position:relative;
+    float: left;
+    margin: 15px;
+}
+.eltthumb{
+    border:10px solid rgb(68, 68, 68);
+    -webkit-border-radius:5px 5px 5px 5px;
+    -moz-border-radius:5px 5px 5px 5px;
+    border-radius:5px 5px 5px 5px; 
+
+    -webkit-box-shadow: 10px 5px 5px #888;
+    -moz-box-shadow: 10px 5px 5px #888;
+    box-shadow: 10px 5px 5px #888;
+
+
+    height: 150px;
+    width: 250px;
+    overflow: hidden;
+}
+.galeryelt img{
+}
+.eltdesc{
+    text-align: left;
+    font-size: 14px;
+    padding: 2px;
+    height: 100px;
+    margin-top: 5px;
+    border: 2px solid #DDDDDD;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    width: 260px;
+    overflow: hidden;
+    box-shadow: 0 0 5px #DDDDDD;
+}
+.eltthumb a img {
+    border-width:0;
+}
+
+
+.eltthumb .imglayer{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.eltthumb .star{
+    position: absolute;
+    top: 140px;
+    right: 10px;
+    z-index: 2;
+}
+
+.mask{/*Pour camoufler l'eventuel separation dans le sprite'*/
+    position: absolute;
+    top: 8px;
+    background-color: #444444;
+    height: 5px;
+    width: 250px;
+    z-index: 3;
+}
+
+.eltdesc .title, .eltdesc .price, .eltdesc .pubdate, .eltdesc .artist{
+    display: inline;
+    font-size: 11px;
+}
+
+
+/*Css du toggler de page*/
+.contenttoggler {
+    margin-top: 6px;
+    text-align: center;
+    width: 500px;
+}
+.contenttoggler a {
+    border: 1px solid black;
+    color: #666666;
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 0;
+    padding: 1px 3px;
+    text-decoration: none;
+}
+.contenttoggler a.selected {
+    background: none repeat scroll 0 0 transparent;
+    color: #666666;
+}
+.contenttoggler a:hover {
+    background: none repeat scroll 0 0 #666666;
+    color: #BBBBBB;
+}
+.contenttoggler a.toc {
+    padding: 3px 10px;
+}
+.contenttoggler a.prev, .contenttoggler a.next {
+}
+.contenttoggler a.prev:hover, .contenttoggler a.next:hover {
+    background: none repeat scroll 0 0 transparent;
+    color: #666666;
+}
+
+/*social btns below the image label*/
+.social a{
+    outline: none;
+    text-decoration: none;
+}
+.sbtn {
+	-moz-box-shadow:inset 0px 0px -1px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 0px -1px 0px #ffffff;
+	box-shadow:inset 0px 0px -1px 0px #ffffff;
+	background-color:#ededed;
+	-moz-border-radius:14px;
+	-webkit-border-radius:14px;
+	border-radius:14px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:3px 12px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #ffffff;
+}.sbtn:hover {
+	background-color:#dfdfdf;
+}.sbtn:active {
+	position:relative;
+	top:1px;
+}
+
+.views {
+	-moz-box-shadow:inset 0px 0px -1px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 0px -1px 0px #ffffff;
+	box-shadow:inset 0px 0px -1px 0px #ffffff;
+	border:1px solid #dcdcdc;
+        float: right;
+	padding:3px 12px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #ffffff;
+}
+

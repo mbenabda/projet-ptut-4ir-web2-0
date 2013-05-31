@@ -1,0 +1,95 @@
+#bloc_resultat_inscription{
+    margin: auto;
+    width: 900px;
+}
+
+#bloc_inscription{
+    position:relative;
+    top:30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    width:900px;
+}
+
+#bloc_inscription td.label {
+    width: 180px;
+}
+
+#bloc_inscription form section.gauche {
+    padding-left: 10px;
+    padding-right: 20px;
+    width: 400px;
+    float: left;
+    display: inline;
+}
+
+#bloc_inscription form section table {
+    width:100%;
+}
+
+#bloc_inscription form section table td{
+    vertical-align:top;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+#adresse {
+    width: 387px;
+}
+
+#bloc_inscription form section{
+    
+}
+
+#bloc_inscription form input[type=text], form input[type=password],#bloc_inscription select {
+    background: #fff;
+    width:200px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    
+    border-radius:5px;
+
+    border:1px solid #ccc;
+    height:25px;
+}
+
+#bloc_inscription form section input:hover {
+    border:1px solid #999;
+}
+
+#bloc_inscription form section input:focus,textarea:focus{
+    border:1px solid #42596d;
+    background: #1a1f24;
+    color:#fff;
+}
+
+#bloc_inscription form button {
+    background-image:url(../img/menu.png);
+    text-align:center;
+    margin-right:100px;
+    cursor:pointer;
+    width:100px;
+    height:40px;
+    border:1px solid #42596d;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+
+#bloc_inscription form button:hover {
+    border:1px solid #fff;
+}
+
+#bloc_inscription form fieldset {
+    width: 840px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+
+    border:2px solid #DCDCDC;
+    padding-left: 20px;
+}
+#bloc_inscription form fieldset legend {
+}

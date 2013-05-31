@@ -1,0 +1,177 @@
+/*Skelette globale du document*/
+
+#bloc_compilation{
+    position:relative;
+    top: 20px;
+    margin-left:30px;
+    padding-bottom: 20px;
+    width:950px;
+}
+
+#bloc_tracklist{
+    font-size: 12px;
+    position:relative;
+    top: 20px;
+    float: left;
+    margin-left:30px;
+    width:550px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.sidegroup{
+    position:relative;
+    top: 20px;
+    float: left;
+    margin-left:30px;
+}
+
+#bloc_download{
+    width:370px;
+}
+
+#bloc_artistthumb{
+    margin-top: 20px;
+    width:370px;
+}
+
+#bloc_comment{
+    position:relative;
+    margin-left:30px;
+    width:950px;
+    padding-bottom: 40px;
+}
+
+/*Sliding box and caption dans le bloc principale*/
+.compilcover{
+    position: relative;
+    width: 300px;
+}
+.compilbackcover{
+    position: absolute;
+    top: 40px;
+    left: 300px;
+    width: 300px;
+}
+
+.compildesc{
+    position: absolute;
+    padding-left: 10px;
+    top: 50px;
+    left: 600px;
+    width: 330px;
+    height: 280px;
+    border: 2px solid #DDDDDD;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 12px;
+}
+
+.boxgrid{  
+    width: 260px;  
+    height: 260px;  
+    margin:10px;  
+    background:#161613;  
+    border: solid 2px #8399AF;  
+    overflow: hidden;  
+    position: relative;
+    border:10px solid rgb(68, 68, 68);
+    -webkit-border-radius:5px 5px 5px 5px;
+    -moz-border-radius:5px 5px 5px 5px;
+    border-radius:5px 5px 5px 5px; 
+    -webkit-box-shadow: 10px 5px 5px #888;
+    -moz-box-shadow: 10px 5px 5px #888;
+    box-shadow: 10px 5px 5px #888;  
+}  
+.boxgrid img{  
+    position: absolute;  
+    width: 260px;  
+    height: 260px;  
+    top: 0;  
+    left: 0;  
+    border: 0;  
+}  
+
+.boxcaption{  
+    float: left;  
+    position: absolute;  
+    background: #000;  
+    height: 100px;  
+    width: 100%;  
+    opacity: .8;  
+    /* For IE 5-7 */  
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);  
+    /* For IE 8 */  
+    -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";  
+    text-align: center;
+}  
+
+.captionfull .boxcaption {  
+    top: 260px;  
+    left: 0px;  
+}  
+.caption .boxcaption {  
+    top: 220px;  
+    left: 0px;  
+}  
+
+/*Bloc Download*/
+#bloc_download img{
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    width: 80px;
+    height: 80px;
+}
+
+#bloc_download .downdesc{
+    position: relative;
+    float: left;
+    width: 250px;
+    padding: 5px;
+    border: 2px solid #DDDDDD;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 12px;
+}
+#bloc_download .contenu_bloc{
+    height: 200px;
+}
+
+/*bloc artistes participants*/
+ul.thumb {
+    height: 210px;
+    list-style: none outside none;
+    margin-left: -10px;
+    margin-top: 0;
+    padding: 10px;
+    width: 360px;
+}
+ul.thumb li {
+    margin: 0; padding: 5px;
+    float: left;
+    position: relative;  /* Set the absolute positioning base coordinate */
+    width: 110px;
+    height: 110px;
+}
+ul.thumb li img {
+    width: 100px; height: 100px; /* Set the small thumbnail size */
+    -ms-interpolation-mode: bicubic; /* IE Fix for Bicubic Scaling */
+    border: 1px solid #ddd;
+    padding: 5px;
+    background: #f0f0f0;
+    position: absolute;
+    left: 0; top: 0;
+}
+ul.thumb li img.hover {
+    background:url(../img/thumb_bg.png) no-repeat center center;  /* Image used as background on hover effect*/
+    border: none; /* Get rid of border on hover */
+}
+
+/*Bloc tracklist*/
+#bloc_tracklist .contenu_bloc{
+    height: 515px;
+}
+

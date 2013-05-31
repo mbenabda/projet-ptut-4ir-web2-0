@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Share Your Groove: Accueil</title>
+
+
+        <!--Meta Donnée (essentiellement pour le réferencement)-->   
+        <meta name="publisher" content="INSA Toulouse Web2.0 Group">
+        <meta name="keywords" lang="fr" content="Partage, Musique, Compiles ">
+        <meta name="reply-to" content="root@shareurgroove.com">
+        <meta name="category" content="partage">
+        <meta name="robots" content="index, follow">
+        <meta name="distribution" content="global"> 
+        <meta name="description" content="Site de partage de musique">
+        <meta name="revisit-after" content="3 day"> <!--specifie la fréquence de réindexation du robot-->
+        <meta name="author" lang="fr" content="html Guru"> 
+        <meta name="copyright" content="insaweb2012"> 
+        <meta name="abstract" content="Site de partage de musique"><!--maximum 200 caractéres-->
+        <meta name="identifier-url" content="http://www.shareurgroove.com/">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!--Icon du site--> 
+        <link rel="icon" type="image/png" href="../img/icons/favicon.png"/>
+        <link rel="shortcut icon" type="image/x-icon" href="../img/icons/favicon.ico" />
+        <!--Include des Feuilles de styles-->
+        <link href='../css/design.css' type='text/css' rel='stylesheet' />
+        <link href='../css/accueil.css' type='text/css' rel='stylesheet' />
+        <!--skin du slider d'image d'artistes-->
+        <link rel="stylesheet" type="text/css" href="../css/skins/tango/skin.css" />
+        <!--Police-->
+        <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <!--css de ticker d'annonce-->
+        <link href="../css/skins/ticker-style.css" rel="stylesheet" type="text/css" />
+        <!--css du social jquery-->
+        <link href="../css/skins/jsShare.css" rel="stylesheet" type="text/css" />
+        <!--Include des Scripts-->
+        <!--Slider-->
+        <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+        <script src="../js/JQuery/jquery.bxSlider.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#slider1').bxSlider({
+                    //configuration du slider
+                    auto: true
+                });
+            });
+        </script>
+        <!--Carroussel d'image de nouveaux d'artistes-->
+
+        <script type="text/javascript" src="../js/JQuery/jquery.jcarousel.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function() {
+                jQuery('#mycarousel').jcarousel({
+                    //configuration du carroussel
+                    scroll: 1
+                });
+            });
+        </script>
+        <!--fil d'actualités-->
+        <script type="text/javascript">
+            function tick(){
+                $('#ticker li:first').animate({'opacity':0}, 200, function () { $(this).appendTo($('#ticker')).css('opacity', 3); });
+            }
+            setInterval(function(){ tick () }, 4000);
+        </script>
+        <!--Pour le ticker d'annonce-->
+        <script src="../js/JQuery/jquery.ticker.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('#js-news').ticker();
+            });
+        </script>
+        <!--Pour les rating stars-->
+        <script type="text/javascript" src="../js/jquery.raty.js"></script>
+        <script type="text/javascript">
+            $(function() {$('.star').raty({
+                    start: function() {
+                        return $(this).attr('data-rating');
+                    }
+                });    
+            });
+        </script>
+        <!--vote-->
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".vote a").click(function() {
+                    $(this).parent().animate({
+                        width: '+=5px'
+                    }, 10);
+                    $(this).prev().html(parseInt($(this).prev().html()) + 1);
+                    return false;
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            function hidelink(x){
+                document.getElementById(1).innerHTML="<span>0</span>";
+                document.getElementById(2).innerHTML="<span>0</span>";
+                document.getElementById(3).innerHTML="<span>0</span>";
+                document.getElementById(x).innerHTML="<span>+1 thx for voting</span>";
+            }
+        </script>
+        <!--JQuery social-->
+        <script src="../js/jsShare.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#buttons').jsShare({ maxwidth: 360 });
+                $('#buttons-expanded').jsShare({ initialdisplay: 'expanded', maxwidth: 360 });
+            });
+        </script>
+        <!--fin Scripts-->
+    </head>
+    <body>
+
+        <div id="global">
+            <div id="header"></div>
+            <div id="bandeau"></div>
+            <div id="menu">
+                <ul class="menu">
+                    <li class="btn_compils"><a href="#">Compils</a></li>
+                    <li class="btn_samples"><a href="#">Samples</a></li>
+                    <li class="btn_videos"><a href="#">Vidéos</a></li>
+                    <li class="btn_artistes"><a href="#">Artistes</a></li>
+                </ul>
+            </div>
+            <div id="contenu">
+
+                <div id="annonces">
+                    <ul id="js-news" class="js-hidden">
+                        <li class="news-item"><a href="#">This is the 1st latest news item.</a></li>
+                        <li class="news-item"><a href="#">This is the 2nd latest news item.</a></li>
+                        <li class="news-item"><a href="#">This is the 3rd latest news item.</a></li>
+                        <li class="news-item"><a href="#">This is the 4th latest news item.</a></li>
+                    </ul>
+                </div>
+                <div class="clr"></div>
+
+                <div id="bloc_lastcompil" class="bloc">
+                    <span class="titre_bloc">Last Compil</span>
+                    <div class="contenu_bloc">
+                        <div class="wrap">
+                            <div class="bx-wrapper" style="width: 950px; position: relative;">
+                                <div class="bx-window" style="position: relative;width: 930px;height: 200px;overflow: hidden;">
+                                    <ul id="slider1">
+                                        <li style="width: 800px; float: left; list-style: none outside none;">
+                                            <div class="left">
+                                                <img width="169" height="169" src="../img/pic_velvet1.jpg">
+                                            </div>
+                                            <div class="right">
+                                                <div class="album">
+                                                    The Velvet Underground & Nico
+                                                </div>
+                                                <div class="band">
+                                                    The Velvet Underground
+                                                </div>
+                                                <div class="compillist">
+                                                    <ul>
+                                                        <li>1-Rihana feat eminem</li>
+                                                        <li>2-Pitbul run the show</li>
+                                                        <li>3-Inna vs 50ct</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li style="width: 800px; float: left; list-style: none outside none;">
+                                            <div class="left">
+                                                <img width="169" height="169" src="../img/pic_velvet2.jpg">
+                                            </div>
+                                            <div class="right">
+                                                <div class="album">
+                                                    White Light / White Heat
+                                                </div>
+                                                <div class="band">
+                                                    The Velvet Underground
+                                                </div>
+                                                <div class="compillist">
+                                                    <ul>
+                                                        <li>1-kikooo</li>
+                                                        <li>2-loool</li>
+                                                        <li>3-coool</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li style="width: 800px; float: left; list-style: none outside none;">
+                                            <div class="left">
+                                                <img width="169" height="169" src="../img/pic_velvet3.jpg">
+                                            </div>
+                                            <div class="right">
+                                                <div class="album">
+                                                    The Velvet Underground & Nico
+                                                </div>
+                                                <div class="band">
+                                                    The Velvet Underground
+                                                </div>
+                                                <div class="compillist">
+                                                    <ul>
+                                                        <li>1-Rihana feat eminem</li>
+                                                        <li>2-Pitbul run the show</li>
+                                                        <li>3-Inna vs 50ct</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li style="width: 800px; float: left; list-style: none outside none;">
+                                            <div class="left">
+                                                <img width="169" height="169" src="../img/pic_velvet4.jpg">
+                                            </div>
+                                            <div class="right">
+                                                <div class="album">
+                                                    The Velvet Underground & Nico
+                                                </div>
+                                                <div class="band">
+                                                    The Velvet Underground
+                                                </div>
+                                                <div class="compillist">
+                                                    <ul>
+                                                        <li>1-Rihana feat eminem</li>
+                                                        <li>2-Pitbul run the show</li>
+                                                        <li>3-Inna vs 50ct</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bigbloc">
+
+                    <div id="bloc_actu" class="bloc">
+                        <span class="titre_bloc">News</span>
+                        <div class="contenu_bloc">
+                            <ul id="ticker" class="ticker">
+                                <li style="display: list-item;">
+                                    <img src="http://a0.twimg.com/profile_images/1899297749/Ed_Lucente_-_III_normal.jpg">
+                                    jqBarGraph is jQuery plugin that gives you freedom to easily display your data as graphs. There are three types of graphs: simple, multi and stacked.
+                                </li>
+                                <li>
+                                    <img src="http://a0.twimg.com/profile_images/2153033019/Edited_30012011563_e_normal.jpg">                                Learn how to create image gallery in 4 lines of Jquery
+                                </li>
+                                <li>
+                                    <img src="http://a0.twimg.com/profile_images/1889023954/me10_normal.jpg">
+                                    jqFancyTransitions is easy-to-use jQuery plugin for displaying your photos as slideshow with fancy transition effects.
+                                </li>
+                                <li>
+                                    <img src="http://a0.twimg.com/profile_images/1916467905/2012-03-17_13-26-40_924_normal.jpg">
+                                    mooBarGraph is AJAX graph plugin for MooTools which support two types of graphs, simple bar and stacked bar graph.
+                                </li>
+                            </ul>
+
+                                <div id="buttons-expanded">
+                                </div>
+
+                        </div>
+                    </div>
+
+                    <div id="bloc_classement" class="bloc">
+                        <span class="titre_bloc">Classement</span>
+                        <div class="contenu_bloc">
+                            <ul>
+                                <li>
+                                    <div class="ratedartistimg">
+                                        <img src="http://static.flickr.com/66/199481236_dc98b5abb3_s.jpg" width="75" height="75" alt="" />
+                                    </div>
+                                    <div class="ratedartist">
+                                        <div class="name">Eminem</div>
+                                        <div class="rating">
+                                            <div class="star" data-rating="5"></div>
+                                            <div class="vote" id="1"><span>40</span><a href="" id="v1" onclick="hidelink(1)">Vote</a>mockingbird</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ratedartistimg">
+                                        <img src="http://static.flickr.com/69/199481255_fdfe885f87_s.jpg" width="75" height="75" alt="" />
+                                    </div>
+                                    <div class="ratedartist">
+                                        <div class="name">Rihanna</div>
+                                        <div class="rating">
+                                            <div class="star" data-rating="4"></div>
+                                            <div class="vote" id="2"><span>30</span><a href="" id="v2" onclick="hidelink(2)">Vote</a>devil inside</div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ratedartistimg">
+                                        <img src="http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg" width="75" height="75" alt="" />
+                                    </div>
+                                    <div class="ratedartist">
+                                        <div class="name">Pitbul</div>
+                                        <div class="rating">
+                                            <div class="star" data-rating="3"></div>
+                                            <div class="vote" id="3"><span>40</span><a href="" id="v3" onclick="hidelink(3)">Vote</a>ibiza</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="clr"></div>
+
+                <div id="bloc_newartist" class="bloc">
+                    <span class="titre_bloc">New Artists</span>
+                    <div class="contenu_bloc">
+
+                        <ul id="mycarousel" class="jcarousel-skin-tango">
+                            <li><img src="http://static.flickr.com/66/199481236_dc98b5abb3_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/57/199481087_33ae73a8de_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/77/199481108_4359e6b971_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/58/199481143_3c148d9dd3_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/58/199481218_264ce20da0_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/69/199481255_fdfe885f87_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/60/199480111_87d4cb3e38_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/70/229228324_08223b70fa_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/66/199481236_dc98b5abb3_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/75/199481072_b4a0d09597_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/57/199481087_33ae73a8de_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/77/199481108_4359e6b971_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/58/199481143_3c148d9dd3_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/72/199481203_ad4cdcf109_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/58/199481218_264ce20da0_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/69/199481255_fdfe885f87_s.jpg" width="75" height="75" alt="" /></li>
+                            <li><img src="http://static.flickr.com/60/199480111_87d4cb3e38_s.jpg" width="75" height="75" alt="" /></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clr"></div>
+
+            </div>
+            <div id="footer" style="text-align: center; color: #ffffff">
+                © WEB 2.0 TEAM INSA 2012.
+                <a style="text-decoration: none; color: #42596d" href='mailto&#58;&#102;%6&#53;di%74&#110;&#64;v&#111;ia&#108;&#46;&#102;r'>Contact Admin</a>
+            </div>
+        </div>
+
+
+    </body>
+</html>
+
